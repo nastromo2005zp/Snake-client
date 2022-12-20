@@ -126,30 +126,26 @@ const App = () => {
 /* game process */
     useEffect(() => {
 
-        const interval = direction !== AVAILABLE_MOVES[4] ? gameLoop() : gameOver();//alert("Game over");
+        const interval = direction !== AVAILABLE_MOVES[4] ? gameLoop() : gameOver();
         return () => clearInterval(interval);
 
 
 
-    }, [snake, direction, gameLoop, gameOver])
+    }, [snake])
 
 
    /* generate random food position */
    const generateFood = () => {
-       let newFood
-
-
-       if (snake.some(elem => elem[0] === newFood[0] && elem[1] === newFood[1])){
-       setFood(newFood) 
-        newFood = [
+       let newFood;
+       do {
+           newFood = [
                Math.floor(Math.random() * BOARD_SIZE),
                Math.floor(Math.random() * BOARD_SIZE)
            ];
        }
-           
-      
-        
-    }
+       while (snake.some(elem => elem[0] === newFood[0] && elem[1] === newFood[1]));
+       setFood(newFood);
+   }
 
   const gameLoop = () => {
         const timerId = setTimeout(() => {
