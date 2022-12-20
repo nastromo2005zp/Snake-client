@@ -131,7 +131,7 @@ const App = () => {
 
 
 
-    }, [])//snake
+    }, [snake, direction, gameLoop, gameOver])
 
 
    /* generate random food position */
