@@ -1,0 +1,73 @@
+* {
+  background-color: black;
+  color: #fff;
+  font-family: "Comic Sans MS";
+}
+.header {
+  font-size: 2rem;
+
+
+}
+.header h1 {
+  color: #8EE82E;
+
+}
+
+.game {
+  display: flex;
+}
+.main {
+  margin: 0 auto;
+  display: flex;
+
+}
+.parentTable {
+  margin-top: 5px;
+
+  display: flex;
+  justify-content: center;
+
+
+}
+.tableText {
+  font-size: 1.5rem;
+}
+
+.alerts {
+  color: #8EE82E;
+}
+.tableHeader {
+  margin-bottom: 40px;
+}
+.parentTable div {
+  border: 1px solid #8EE82E;
+  text-align: center;
+  width: 50%;
+
+}
+.table {
+  padding: 70px;
+  margin: 0 auto;
+  width: 70%;
+}
+.aside {
+  margin: 30px 30px 30px 100px;
+}
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8EE82E;
+  border-radius: 40%;
+  margin: 2px;
+}
+.row {
+  display: flex;
+}
+
+.food {
+  background-color: #fff;
+}
+
+.snake {
+  background-color: #8EE82E;
+}
