@@ -131,25 +131,29 @@ const App = () => {
 
 
 
-    }, [snake])
+    }, [])//snake
 
 
    /* generate random food position */
    const generateFood = () => {
        let newFood
-       do {
-           newFood = [
+
+
+       if (snake.some(elem => elem[0] === newFood[0] && elem[1] === newFood[1])){
+       setFood(newFood) 
+        newFood = [
                Math.floor(Math.random() * BOARD_SIZE),
                Math.floor(Math.random() * BOARD_SIZE)
            ];
        }
-       while (snake.some(elem => elem[0] === newFood[0] && elem[1] === newFood[1]))
-       setFood(newFood);
+           
+      
+        
     }
 
   const gameLoop = () => {
         const timerId = setTimeout(() => {
-            //console.log('game loop');
+           
             const newSnake = snake;
             let move = [];
 
